@@ -35,8 +35,7 @@
 - [ ] I have Extended README or added javadocs where applicable
 - [ ] Added copyright headers for new files from CONTRIBUTING.md
 - [ ] My code follows the code style of this project.
-- [ ] My commits and the title of this PR follow the [Conventional Commits Specification](https://www.conventionalcommits.org).
 <!--
+- [ ] My commits and the title of this PR follow the [Conventional Commits Specification](https://www.conventionalcommits.org). -->
 - [ ] I have read the [contributing guidelines](https://github.com/mykaarma/information-modal/blob/main/CONTRIBUTING.md).
--->
 - [ ] I have updated the ChangeLog (https://github.com/mykaarma/information-modal/blob/main/CHANGELOG.md) following [Semantic Versioning] (https://semver.org)
