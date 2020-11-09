@@ -54,7 +54,7 @@ Optionally you can also overrider the host and port the service runs on
 
 ## Database Requirements
 * The default persistence used is [mysql](https://www.mysql.com/)
-* Database Schema is present [here] (https://github.com/mykaarma/information-modal/blob/main/database/schema.sql)
+* Database Schema is present [here](https://github.com/mykaarma/information-modal/blob/main/database/schema.sql)
 * If you want to schema to auto generate add this property to application.yml - `spring.jpa.hibernate.ddl-auto: update`
 
 
@@ -68,13 +68,13 @@ Optionally you can also overrider the host and port the service runs on
 
 ## Contributions
 
-We welcome contributions to Information Modal. Please see our [contribution guide] (https://github.com/mykaarma/information-modal/blob/main/CONTRIBUTING.md) for more details.
+We welcome contributions to Information Modal. Please see our [contribution guide](https://github.com/mykaarma/information-modal/blob/main/CONTRIBUTING.md) for more details.
 
 ## License
 Copyright 2020 myKaarma
 
-Licensed under the [GNU Affero General Public License v3] (https://github.com/mykaarma/information-modal/blob/main/LICENSE)
+Licensed under the [GNU Affero General Public License v3](https://github.com/mykaarma/information-modal/blob/main/LICENSE)
 
 ## Motivation
 
-[Netflix OSS] (https://github.com/Netflix)
+[Netflix OSS](https://github.com/Netflix)
