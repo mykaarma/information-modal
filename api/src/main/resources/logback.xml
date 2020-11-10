@@ -1,4 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <jmxConfigurator />
+
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>${INFORMATION_MODEL_LOG_LOCATION:-information_modal.log}</file>
+        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+            <layout class="com.mykaarma.oss.information.modal.api.config.LogLayout" />
+        </encoder>
+    </appender>
+
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+            <layout class="com.mykaarma.oss.information.modal.api.config.LogLayout" />
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="FILE" />
+        <appender-ref ref="stdout" />
+    </root>
+
 </configuration>

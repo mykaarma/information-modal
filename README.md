@@ -34,10 +34,10 @@ The service depends on the following Environment Variables to be set:
 * INFORMATION_MODAL_DB_USERNAME [defaults to root]
 * INFORMATION_MODAL_DB_PASSWORD [defaults to root]
 
-Optionally you can also overrider the host and port the service runs on
+Optionally you can also overrider the port the service runs and the log file location with 
 
 * INFORMATION_MODAL_PORT [defaults to 8080]
-
+* INFORMATION_MODEL_LOG_LOCATION [defaults to information_modal.log in current folder]
 
 
 ## Model and Client can be build using
