@@ -103,7 +103,7 @@
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>1.2.2</version>
                 <configuration>
-                    <imageName>${docker.image.prefix:-default}/information-modal-api</imageName>
+                    <imageName>${docker.image.prefix}/information-modal-api</imageName>
                     <dockerDirectory>src/main/docker</dockerDirectory>
                     <resources>
                         <resource>
