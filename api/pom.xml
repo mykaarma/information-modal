@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.mykaarma.oss</groupId>
     <artifactId>information-modal-api</artifactId>
-    <version>1.0.0-RC2</version>
+    <version>1.0.0-RC3</version>
     <name>information-modal-api</name>
     <description>Information Modal API</description>
 
