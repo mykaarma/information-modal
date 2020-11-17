@@ -24,6 +24,21 @@ Schema and Sample Data for the Database.
 ### `js`
 vanilla Js framework
 
+## How to Integrate Js in your Web Application
+
+### Imports
+
+* Import https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js in your html.
+* Import both Js and css files present under Js folder in your html.
+
+### Usage
+
+* Call setFetchDataBaseUrl as soon as your application is launched. Pass your server baseUrl in this function.
+* Wherever you want to use this Info Icon, add this HTML snippet.
+
+```<div class=\"infoIcon infotooltip\" data-identifier=\"Some-Identifier-Tag\" onmouseover=\"showTitle(this)\" onclick=\"openModalPopup(this)\">?</div>
+```
+
 ## Building & Running
 
 The service depends on the following Environment Variables to be set:
