@@ -19,5 +19,5 @@
 package com.mykaarma.oss.information.modal.model.enums;
 
 public enum  ModalContentType {
-    URL, IMAGE
+    URL, HTML
 }
