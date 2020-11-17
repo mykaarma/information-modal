@@ -10,7 +10,7 @@ CREATE TABLE `ModalInfo`(
 	`ModalHeader` varchar(255) DEFAULT NULL,
 	`ModalHeightInPx` int(11) NOT NULL,
 	`ModalWidthInPx` int(11) NOT NULL,
-	`ModalContentType` enum('URL','IMAGE') NOT NULL,
+	`ModalContentType` enum('URL','HTML') NOT NULL,
 	`ModalContent` varchar(2048) NOT NULL,
 	`UUID` varchar(64) NOT NULL,
 	PRIMARY KEY (`ID`),
