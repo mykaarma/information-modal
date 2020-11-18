@@ -28,7 +28,7 @@ vanilla Js framework
 
 ### Imports
 
-* Import https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js in your html.
+* Import [JQuery](https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js) in your html.
 * Import both Js and css files present under Js folder in your html.
 
 ### Usage
@@ -36,7 +36,8 @@ vanilla Js framework
 * Call setFetchDataBaseUrl as soon as your application is launched. Pass your server baseUrl in this function.
 * Wherever you want to use this Info Icon, add this HTML snippet.
 
-```<div class=\"infoIcon infotooltip\" data-identifier=\"Some-Identifier-Tag\" onmouseover=\"showTitle(this)\" onclick=\"openModalPopup(this)\">?</div>
+```
+<div class=\"infoIcon infotooltip\" data-identifier=\"Some-Identifier-Tag\" onmouseover=\"showTitle(this)\" onclick=\"openModalPopup(this)\">?</div>
 ```
 
 ## Building & Running

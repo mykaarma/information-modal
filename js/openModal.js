@@ -5,8 +5,8 @@ $(document).ready(function() {
 
 });
 
-function setFetchDataBaseUrl(baseUrl){
-    $.get(baseUrl+'informationModal/moduleModalInfo?moduleName=dealer', // url
+function setFetchDataBaseUrl(baseUrl,module){
+    $.get(baseUrl+'informationModal/moduleModalInfo?moduleName='+module, // url
             function(data, textStatus, jqXHR) { // success callback
         		for(i=0; i<data.moduleModalInfos.dealer.modalInfos.length;i++){
         			identifierTagMap[data.moduleModalInfos.dealer.modalInfos[i].identifierTag] = data.moduleModalInfos.dealer.modalInfos[i];
