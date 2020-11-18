@@ -33,7 +33,7 @@ vanilla Js framework
 
 ### Usage
 
-* Call setFetchDataBaseUrl as soon as your application is launched. Pass your server baseUrl in this function.
+* Call setFetchDataBaseUrl as soon as your application is launched. Pass your server baseUrl and module in this function.
 * Wherever you want to use this Info Icon, add this HTML snippet.
 
 ```
