@@ -38,4 +38,4 @@
 <!--
 - [ ] My commits and the title of this PR follow the [Conventional Commits Specification](https://www.conventionalcommits.org). -->
 - [ ] I have read the [contributing guidelines](https://github.com/mykaarma/information-modal/blob/main/CONTRIBUTING.md).
-- [ ] I have updated the ChangeLog (https://github.com/mykaarma/information-modal/blob/main/CHANGELOG.md) following [Semantic Versioning] (https://semver.org)
+- [ ] I have updated the [ChangeLog](https://github.com/mykaarma/information-modal/blob/main/CHANGELOG.md) following [Semantic Versioning](https://semver.org)
