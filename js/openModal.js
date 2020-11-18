@@ -6,10 +6,10 @@ $(document).ready(function() {
 });
 
 function setFetchDataBaseUrl(baseUrl,module){
-    $.get(baseUrl+'informationModal/moduleModalInfo?moduleName='+module, // url
-            function(data, textStatus, jqXHR) { // success callback
-        		for(i=0; i<data.moduleModalInfos.dealer.modalInfos.length;i++){
-        			identifierTagMap[data.moduleModalInfos.dealer.modalInfos[i].identifierTag] = data.moduleModalInfos.dealer.modalInfos[i];
+    $.get(baseUrl+'informationModal/moduleModalInfo?moduleName='+module, 
+            function(data, textStatus, jqXHR) { 
+        		for(i=0; i<data.moduleModalInfos[module].modalInfos.length;i++){
+        			identifierTagMap[data.moduleModalInfos[module].modalInfos[i].identifierTag] = data.moduleModalInfos[module].modalInfos[i];
         		}
             });
 }
