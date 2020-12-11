@@ -18,12 +18,18 @@
  */
 var identifierTagMap = new Map();
 $(document).ready(function() {
-    var modalDiv = $('<div></div>').attr('id', 'infoModalId').attr('class', 'infoModalClass');
-    modalDiv.appendTo('body');
-
+    appendInfoModalDiv();
 });
 
+function appendInfoModalDiv(){
+    var modalDiv = $('<div></div>').attr('id', 'infoModalId').attr('class', 'infoModalClass');
+    modalDiv.appendTo('body');
+}
+
 function setFetchDataBaseUrl(baseUrl,module){
+    if(!(document.getElementById("infoModalId"))){
+       appendInfoModalDiv(); 
+    }
     $.get(baseUrl+'informationModal/moduleModalInfo?moduleName='+module, 
             function(data, textStatus, jqXHR) { 
         		for(i=0; i<data.moduleModalInfos[module].modalInfos.length;i++){
