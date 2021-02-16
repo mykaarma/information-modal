@@ -10,7 +10,10 @@
 
 
 ## JS
-*version*: `1.0.1`
+*version*: `1.0.2`
+
+## v 1.0.2
+1. z-index to show tooltip on popup and added css to show tooltip on left of button
 
 ## v 1.0.1
 1. Appended InfoModalDiv if it is not appended on Document Ready
