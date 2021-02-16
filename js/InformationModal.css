@@ -94,8 +94,9 @@
     top: 20px;
 }
 
-.infotooltiptext-right{
+.infotooltip-right .infotooltiptext{
 	width:200px;
 	right: 15px;
+    left: unset;
     top: 20px;
 }
