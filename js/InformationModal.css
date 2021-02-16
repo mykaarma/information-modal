@@ -97,5 +97,6 @@
 .infotooltiptext-right{
 	width:200px;
 	right: 15px;
+    left: unset;
     top: 20px;
 }
