@@ -58,7 +58,7 @@ function openModalPopup(element) {
     		leftPos = 0;
     	}
     }
-    var large = '<div class="informationModal" id="informationModalId" style="left: '+leftPos+'px; top: '+topPos+'px; padding: 0pt; visibility: visible; position: absolute; overflow: visible;">'+
+    var large = '<div class="informationModal" id="informationModalId" style="left: '+leftPos+'px; top: '+topPos+'px; padding: 0pt; visibility: visible; position: absolute; overflow: visible; z-index:1000;">'+
     	'<div><table cellspacing="0" cellpadding="0" style="width: 100%; height: 100%;"><tbody><tr>'+
     	'<td align="left" style="vertical-align: top;"><table cellspacing="0" cellpadding="0" class="mk-popup-title-panel" style="width: 100%;">'+
     	'<tbody><tr><td align="left" style="vertical-align: middle;"><div class="mk-h6">'+identifierTagMap[id].modalHeader+
