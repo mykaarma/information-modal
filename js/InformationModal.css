@@ -29,6 +29,7 @@
 }
 .informationModal{
 	width: 1200px ;
+    z-index:1000;
 }
 .mk-popup-title-panel{
 	background-color: #727272;
@@ -90,5 +91,11 @@
 .infotooltiptext{
 	width:200px;
 	left: 15px;
+    top: 20px;
+}
+
+.infotooltiptext-right{
+	width:200px;
+	right: 15px;
     top: 20px;
 }
