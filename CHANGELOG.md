@@ -10,7 +10,10 @@
 
 
 ## JS
-*version*: `1.0.2`
+*version*: `1.0.3`
+
+## v 1.0.3
+1. fix NPE in hideModalPopup
 
 ## v 1.0.2
 1. z-index to show tooltip on popup and added css to show tooltip on left of button
