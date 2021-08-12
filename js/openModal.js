@@ -87,6 +87,8 @@ function showTitle(element) {
 }
 
 function hideModalPopup(element) {
-    document.getElementById('informationIframePanelId').src = '';
+    if(document.getElementById('informationIframePanelId')!=null){
+        document.getElementById('informationIframePanelId').src = '';
+    }
     $("#infoModalId").css("display", "none");
 }
