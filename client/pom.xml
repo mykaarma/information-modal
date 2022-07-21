@@ -1,12 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.mykaarma.oss</groupId>
   <artifactId>information-modal-client</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <name>information-modal-client</name>
   <packaging>jar</packaging>
   <description>Retrofit based wrapper over the API</description>
@@ -57,4 +54,23 @@
       </plugin>
     </plugins>
   </build>
-</project>
+<repositories>
+            <repository>
+                <snapshots>
+                    <enabled>false</enabled>
+                </snapshots>
+                <id>central</id>
+                <name>Central Repository</name>
+                <url>https://repo.maven.apache.org/maven2</url>
+            </repository>
+            <repository>
+                <id>ci02.kaar.biz</id>
+                <name>ci01.kaar.biz-releases</name>
+                <url>https://qa-artifactory.mykaarma.com/artifactory/libs-release</url>
+            </repository>
+            <repository>
+                <id>ci04.kaar.biz</id>
+                <name>ci04.kaar.biz-snapshots</name>
+                <url>https://qa-artifactory.mykaarma.com/artifactory/libs-snapshot</url>
+            </repository>
+	    </repositories></project>
