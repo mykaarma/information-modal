@@ -29,7 +29,11 @@ pipeline {
                         userRemoteConfigs: [[
                             url: "${GIT_REPO_URL}",
                             credentialsId: 'git_credentials'
-                        ]]
+                        ]],
+                        extensions: [
+                            [$class: 'SparseCheckoutPaths', 
+                             sparseCheckoutPaths: [[$class:'SparseCheckoutPath', path: "${GIT_REPO_PATH}"]]]
+                        ]
                     ])
                 }
             }
