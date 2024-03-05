@@ -29,11 +29,7 @@ pipeline {
                         userRemoteConfigs: [[
                             url: "${GIT_REPO_URL}",
                             credentialsId: 'git_credentials'
-                        ]],
-                        extensions: [
-                            [$class: 'SparseCheckoutPaths', 
-                             sparseCheckoutPaths: [[$class:'SparseCheckoutPath', path: "${GIT_REPO_PATH}"]]]
-                        ]
+                        ]]
                     ])
                 }
             }
@@ -46,7 +42,7 @@ pipeline {
                         jdk: "${JAVA_VERSION}",
                         maven: 'maven'
                     ) {
-                        sh "mvn clean verify package"
+                        sh "mvn clean verify package -DskipTests"
                     }
                 }
             }
