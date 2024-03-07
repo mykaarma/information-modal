@@ -9,7 +9,7 @@
     </parent>
     <groupId>com.mykaarma.oss</groupId>
     <artifactId>information-modal-api</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <name>information-modal-api</name>
     <description>Information Modal API</description>
 
@@ -98,21 +98,57 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
             <plugin>
-                <groupId>com.spotify</groupId>
-                <artifactId>docker-maven-plugin</artifactId>
-                <version>1.2.2</version>
-                <configuration>
-                    <imageName>${docker.image.prefix}/information-modal-api</imageName>
-                    <dockerDirectory>src/main/docker</dockerDirectory>
-                    <resources>
-                        <resource>
-                            <targetPath>/</targetPath>
-                            <directory>${project.build.directory}</directory>
-                            <include>${project.build.finalName}.jar</include>
-                        </resource>
-                    </resources>
-                </configuration>
-            </plugin>
+				<groupId>io.fabric8</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>0.43.0</version>
+				<dependencies>
+					<dependency>
+						<groupId>javax.activation</groupId>
+						<artifactId>javax.activation-api</artifactId>
+						<version>1.2.0</version>
+						<scope>compile</scope>
+					</dependency>
+				</dependencies>
+				<configuration>
+					<registry>${docker.image.prefix}/information-modal-api</registry>
+					<outputDirectory>.</outputDirectory>
+					<images>
+						<image>
+							<name>${docker.image.prefix}/information-modal-api:${project.version}</name>
+							<build>
+								<dockerFile>${project.basedir}/src/main/docker/Dockerfile</dockerFile>
+								<contextDir>${project.basedir}/target</contextDir>
+								<buildx>
+									<platforms>
+										<platform>${docker.platforms}</platform>
+									</platforms>
+								</buildx>
+							</build>
+						</image>
+					</images>
+					<resources>
+						<resource>
+							<targetPath>/</targetPath>
+							<directory>${project.build.directory}</directory>
+							<include>${project.build.finalName}.jar</include>
+						</resource>
+					</resources>
+				</configuration>
+				<executions>
+					<execution>
+						<id>docker-build</id>
+						<goals>
+							<goal>build</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>docker-push</id>
+						<goals>
+							<goal>push</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
         </plugins>
     </build>
 
