@@ -4,7 +4,7 @@ spring:
   main:
     banner-mode: log
   datasource:
-    url: jdbc:mysql://${INFORMATION_MODAL_DB_HOST:-localhost}:${INFORMATION_MODAL_DB_PORT:-3306}/${INFORMATION_MODAL_DB_NAME:-InformationModalDB}?useUnicode=yes&characterEncoding=utf8&useLegacyDatetimeCode=false&serverTimezone=UTC
+    url: jdbc:mariadb://${INFORMATION_MODAL_DB_HOST:-localhost}:${INFORMATION_MODAL_DB_PORT:-3306}/${INFORMATION_MODAL_DB_NAME:-InformationModalDB}?useUnicode=yes&characterEncoding=utf8&useLegacyDatetimeCode=false&serverTimezone=UTC
     username: ${INFORMATION_MODAL_DB_USERNAME:-root}
     password: ${INFORMATION_MODAL_DB_PASSWORD:-root}
 
