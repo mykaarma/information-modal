@@ -1,0 +1,56 @@
+pipeline {
+    agent any
+
+    environment {
+        ARTIFACTORY_ID = 'artifactory'
+        RELEASE_REPO = 'libs-release-local'
+        SNAPSHOT_REPO = 'libs-snapshot-local'
+        JAVA_VERSION = 'Java11' // Specify the desired JDK installation tool
+        GIT_REPO_URL = 'https://github.com/mykaarma/information-modal.git'
+        GIT_REPO_PATH = 'model/'
+    }
+    parameters{
+        string(name: 'branch', defaultValue: 'main')
+    }
+    tools {
+        jdk 'JAVA11'
+        maven 'maven' 
+    }
+    stages {
+        stage ("Source Code Management") {
+            steps{
+                script {
+                    checkout ([
+                        $class: 'GitSCM',
+                        branches: [[name: "${params.branch}"]],
+                        userRemoteConfigs: [[
+                            url: "${GIT_REPO_URL}",
+                            credentialsId: 'github'
+                        ]]
+                    ])
+                }
+            }
+        }
+
+
+        stage('Maven Build and Artifactory Upload') {
+            steps {
+                dir(env.GIT_REPO_PATH){
+                    script {
+                        def server = Artifactory.server ARTIFACTORY_ID
+                        def rtMaven = Artifactory.newMavenBuild()
+                        rtMaven.deployer releaseRepo: env.RELEASE_REPO, snapshotRepo: env.SNAPSHOT_REPO, server: server
+                        rtMaven.deployer.deployArtifacts = false // Disable artifacts deployment during Maven run
+                        def buildInfo = Artifactory.newBuildInfo()
+                        buildInfo.env.capture = true
+                        def artifactInfo = rtMaven.run pom: "pom.xml", goals: 'clean install -DskipTests'
+                        buildInfo.retention maxBuilds: 10, maxDays: 7, deleteBuildArtifacts: false
+                        rtMaven.deployer.deployArtifacts artifactInfo
+                        server.publishBuildInfo buildInfo
+                    }
+                }
+            }
+
+        }
+    }
+}
