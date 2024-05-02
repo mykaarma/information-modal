@@ -4,7 +4,7 @@
 
   <groupId>com.mykaarma.oss</groupId>
   <artifactId>information-modal-client</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <name>information-modal-client</name>
   <packaging>jar</packaging>
   <description>Retrofit based wrapper over the API</description>
