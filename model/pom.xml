@@ -4,7 +4,7 @@
 
   <groupId>com.mykaarma.oss</groupId>
   <artifactId>information-modal-model</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
   <name>information-modal-model</name>
   <description>Common Code shared by both client and Api</description>
