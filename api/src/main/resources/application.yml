@@ -4,10 +4,10 @@ spring:
   main:
     banner-mode: log
   datasource:
-    driver-class-name: ${INFORMATION_MODAL_JDBC_DRIVER:-com.mysql.cj.jdbc.Driver}
-    url: ${INFORMATION_MODAL_DB_URL:jdbc:${INFORMATION_MODAL_DB_SCHEME:-mysql}://${INFORMATION_MODAL_DB_HOST:-localhost}:${INFORMATION_MODAL_DB_PORT:-3306}/${INFORMATION_MODAL_DB_NAME:-InformationModalDB}?useUnicode=true&characterEncoding=utf8&useLegacyDatetimeCode=false&serverTimezone=UTC&sslMode=PREFERRED&allowPublicKeyRetrieval=true}
-    username: ${INFORMATION_MODAL_DB_USERNAME:-root}
-    password: ${INFORMATION_MODAL_DB_PASSWORD:-root}
+    driver-class-name: ${INFORMATION_MODAL_JDBC_DRIVER:com.mysql.cj.jdbc.Driver}
+    url: ${INFORMATION_MODAL_DB_URL:jdbc:${INFORMATION_MODAL_DB_SCHEME:mysql}://${INFORMATION_MODAL_DB_HOST:localhost}:${INFORMATION_MODAL_DB_PORT:3306}/${INFORMATION_MODAL_DB_NAME:InformationModalDB}?useUnicode=true&characterEncoding=utf8&useLegacyDatetimeCode=false&serverTimezone=UTC&sslMode=PREFERRED&allowPublicKeyRetrieval=true}
+    username: ${INFORMATION_MODAL_DB_USERNAME:root}
+    password: ${INFORMATION_MODAL_DB_PASSWORD:root}
 
   jpa:
     hibernate:
@@ -15,6 +15,6 @@ spring:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 
 server:
-  port: ${INFORMATION_MODAL_PORT:-8080}
+  port: ${INFORMATION_MODAL_PORT:8080}
   servlet:
     context-path: /informationModal
