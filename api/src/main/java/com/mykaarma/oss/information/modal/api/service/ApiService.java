@@ -143,7 +143,7 @@ public class ApiService {
      */
     private ModuleModalInfoDTO getModalsForSingleModule(Module module, HashMap<WarningCodes, String> warnings){
         List<ModuleModalInfoMapping> moduleModalInfoMappings =
-                moduleModalInfoMappingRepository.findAllByModuleId(module.getId());
+                moduleModalInfoMappingRepository.findAllByModule_Id(module.getId());
         ModuleModalInfoDTO moduleModalInfoDTO = new ModuleModalInfoDTO();
         moduleModalInfoDTO.setModalInfos(new HashSet<>());
         if(moduleModalInfoMappings == null || moduleModalInfoMappings.isEmpty()){

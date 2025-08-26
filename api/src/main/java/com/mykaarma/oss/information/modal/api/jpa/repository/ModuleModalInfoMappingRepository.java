@@ -27,5 +27,5 @@ import java.util.List;
 @Transactional(readOnly = true)
 public interface ModuleModalInfoMappingRepository extends JpaRepository<ModuleModalInfoMapping, Long> {
 
-    public List<ModuleModalInfoMapping> findAllByModuleId(Long moduleId);
+    public List<ModuleModalInfoMapping> findAllByModule_Id(Long moduleId);
 }
